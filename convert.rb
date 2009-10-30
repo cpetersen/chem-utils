@@ -35,7 +35,7 @@
 ###############################
 ################ ATTEMPT 4
 ###############################
-require "cdk-1.3.0.jar"
+require "lib/cdk-1.3.0.jar"
 require 'rubygems'
 gem 'rbtk'
 require 'rubidium/sdf'
@@ -45,7 +45,7 @@ molfile_reader = CDK::MolfileReader.new
 smiles_writer = CDK::SmilesWriter.new
 
 File.open("smiles.csv", "w") do |csv|
-  Dir.glob("*.sdf").each do |filename|
+  Dir.glob("sdf/*.sdf").each do |filename|
     p = Rubidium::SDF::Parser.new File.new(filename)
     csv.puts filename
     puts filename
