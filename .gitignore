@@ -1,3 +1,6 @@
+.DS_Store
+images
+mols
 build
 compile
 run
